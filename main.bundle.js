@@ -605,9 +605,9 @@ module.exports = exported;
   !*** ./src/blocks/map/map.png ***!
   \********************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "data:image/png;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICIwNDQ4MmEwMTRkNWVmOWNmNjk0NDRiZTk2MWIxZDgwNS5wbmciOw=="
+module.exports = __webpack_require__.p + "assets/map.png";
 
 /***/ }),
 
