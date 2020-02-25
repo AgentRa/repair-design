@@ -1,0 +1,11 @@
+import './less/style.scss';
+import './less/_reset.scss';
+import './blocks/page-header/header.scss';
+import './blocks/title/title.scss';
+import './blocks/projects/projects.scss';
+import './blocks/main/main.scss';
+import './blocks/fantasies/fantasies.scss';
+import './blocks/design-project/design-project.scss';
+import './blocks/team/team.scss';
+import './blocks/map/map.png';
+import './blocks/footer/footer.scss';

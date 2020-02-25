@@ -1,0 +1,347 @@
+@import "../../less/mixin";
+$primary: #E3B873;
+$greyOpacity: #FFFFFF30;
+
+.projects {
+  height: 1074px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  &__anch {
+    position: absolute;
+  }
+  &__list {
+    width: 623px;
+    display: flex;
+    justify-content: space-between;
+    margin: 115px auto 0;
+    padding-left: 370px;
+    @include text-style($greyOpacity, 0.9rem, 'Yeseva One');
+
+    li:first-child {
+      border-bottom: solid $primary 1px;
+      :active {
+        color: teal;
+      }
+
+      a {
+        color: $primary;
+      }
+    }
+  }
+
+  .main-part {
+    width: 2000px;
+    height: 482px;
+    display: flex;
+    &__images {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      margin-left: 50px;
+      :first-child {
+        content: url("imageFirst.png");
+      }
+      :last-child {
+        padding-left: 20px;
+        content: url("imageSecond.png");
+      }
+    }
+  }
+
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 442px;
+    height: 482px;
+    font-weight: lighter;
+    margin: 0 0 0 100px;
+
+    &__heading {
+      margin: 0;
+      display: flex;
+      @include text-style($primary, 1.5rem, 'Yeseva One');
+      line-height: 37px;
+
+      div {
+        width: 92px;
+        height: 60px;
+        border-bottom: solid $primary 1px;
+      }
+    }
+
+    &__paragraph_desktop {
+      @include text-style(white, 1.1rem, 'FuturaBookC');
+      line-height: 29px;
+    }
+    &__paragraph_mobile {
+      display: none;
+    }
+    .slider {
+      width: 205px;
+      display: flex;
+      justify-content: space-between;
+      &__arrow {
+        content: url("sliderLeft.png");
+        &:hover {
+          cursor: pointer;
+        }
+        &_right {
+          content: url("sliderLeft.png");
+          transform: rotate(180deg);
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      &__circles {
+        width: 63px;
+        display: flex;
+        justify-content: space-between;
+        :not(:first-child){
+          background-color: $greyOpacity;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        > div {
+          background-color: white;
+          width: 10px;
+          height: 10px;
+          border-radius: 25px;
+          &:hover {
+            cursor: pointer;
+            background-color: white;
+          }
+        }
+      }
+    }
+
+  }
+
+  .properties {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+
+    &__heading {
+      width: 200px;
+      margin-bottom: 0px;
+      @include text-style($primary, 1.1rem, 'Yeseva One');
+    }
+
+    &__paragraph {
+      @include text-style(white, 0.95rem, 'FuturaBookC');
+      line-height: 20px;
+    }
+  }
+  &__arrowR {
+    position: absolute;
+    top: 400px;
+    right: 20px;
+    content: url("arrowRight.png");
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__online {
+    width: 196px;
+    height: 66px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 250px;
+  }
+  .online {
+    &__control {
+      @include text-style(white, 1.1rem, 'Yeseva One');
+    }
+    &__vector {
+      width: 114px;
+      display: flex;
+      > div {
+        margin: 1px;
+        width: 30px;
+        height: 14px;
+        border-bottom: solid $primary 1px;
+      }
+      img {
+        content: url("onlineControl.png");
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    width: 100vw;
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    width: 100vw;
+    padding-top: 165px;
+    .main-part {
+      width: 2000px;
+      height: 482px;
+    }
+    &__list {
+      display: none;
+    }
+    &__arrowR {
+      display: none;
+    }
+  }
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    width: 100vw;
+    height: 764px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    &__anch {
+      position: absolute;
+    }
+    &__list {
+      display: none;
+    }
+
+    .main-part {
+      width: 100vw;
+      height: 634px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      &__images {
+        position: absolute;
+        margin: 0px;
+        :first-child {
+          content: url("imageFirstMobile.png");
+          position: absolute;
+          top: 190px;
+          left: 0px;
+        }
+        :last-child {
+          position: absolute;
+          content: url("arrowLeftMobile.png");
+          top: 320px;
+          left: 20px;
+          padding: 0px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .portfolio {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100vw;
+      height: inherit;
+      font-weight: lighter;
+      margin: 0;
+
+      &__heading {
+        margin: 36px auto 0;
+        width: 125px;
+        display: flex;
+        @include text-style($primary, 1.2rem, 'Yeseva One');
+        line-height: 138%;
+        text-align: center;
+
+        &_hide {
+          display: none;
+        }
+      }
+
+      &__paragraph_desktop {
+        display: none;
+      }
+      &__paragraph_mobile {
+        display: block;
+        align-items: flex-start;
+        height: 100px;
+        padding-bottom: 200px;
+        @include text-style(white, 0.9rem, 'FuturaBookC');
+        text-align: center;
+        margin-top: 0px;
+      }
+      .slider {
+          display: none;
+      }
+
+    }
+
+    .properties {
+      width: 400px;
+      height: 150px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      height: 70px;
+
+      &__heading {
+        width: 200px;
+        margin: 0;
+        @include text-style($primary, 0.85rem, 'Yeseva One');
+      }
+
+      &__paragraph {
+        @include text-style(white, 0.8rem, 'FuturaBookC');
+        line-height: 20px;
+        margin: 0;
+      }
+    }
+    &__arrowR {
+      position: absolute;
+      top: 320px;
+      right: 20px;
+      content: url("arrowRightMobile.png");
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__online {
+      width: 196px;
+      height: 66px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 250px;
+    }
+    .online {
+      &__control {
+        @include text-style(white, 1.1rem, 'Yeseva One');
+      }
+      &__vector {
+        width: 114px;
+        display: flex;
+        > div {
+          margin: 1px;
+          width: 30px;
+          height: 14px;
+          border-bottom: solid $primary 1px;
+        }
+        img {
+          content: url("onlineControl.png");
+        }
+      }
+    }
+  }
+}
+

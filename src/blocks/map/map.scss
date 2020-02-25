@@ -1,0 +1,74 @@
+@import "../../less/mixin";
+$primary: #E3B873;
+
+.map {
+  height: 953px;
+  background-image: url("backgroundMap.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  &__background {
+    height: 953px;
+    width: 1440px;
+    position: absolute;
+    background-color: #000000;
+    opacity: 0.85;
+    z-index: 1;
+  }
+  &__heading {
+    @include text-style($primary, 1.1rem, 'Yeseva One');
+    margin-top: 300px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    z-index: 2;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    width: 71px;
+    z-index: 2;
+    @include links(white, white, white, white);
+    :first-child {
+      content: url("mail.png");
+    }
+    :last-child {
+      content: url("insta.png");
+    }
+  }
+  &__location {
+    z-index: 2;
+    content: url("map.png");
+  }
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    width: 100vw;
+    height: 450px;
+    opacity: 1;
+    background-color: black;
+    position: relative;
+    &__heading {
+      position: absolute;
+      margin: 0;
+      top: 300px;
+    }
+    &__location {
+      z-index: 2;
+      content: url("mapMobile.png");
+      position: absolute;
+    }
+    &__links {
+      position: absolute;
+      top: 400px;
+    }
+    &__background {
+      background-image: none;
+      display: none;
+    }
+    #contact {
+      background-color: black;
+    }
+  }
+}

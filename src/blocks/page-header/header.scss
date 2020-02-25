@@ -1,0 +1,99 @@
+$primary : #E3B873;
+@import "../../less/mixin";
+
+.header {
+  height: 83px;
+  background-color: black;
+
+  .nav {
+    height: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__heading {
+      @include text-style($primary, 1rem, 'FuturaDemiC');
+    }
+
+    &__list {
+      width: 580px;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      @include text-style(white, 0.9rem, 'FuturaBookC');
+
+      &_colorized a {
+        color: $primary;
+      }
+    }
+
+    &__tel {
+      color: $primary;
+      border-bottom: solid $primary 1px;
+    }
+
+    &__button {
+      width: 160px;
+      height: 37px;
+      color: white;
+      background-color: $primary;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    .nav {
+      width: 100vw;
+
+      &__list {
+        width: 480px;
+        padding: 0;
+        justify-content: space-between;
+      }
+    }
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .nav {
+      width: 100vw;
+
+      &__list {
+        width: 400px;
+        padding: 0;
+      }
+      &__button {
+        display: none;
+      }
+    }
+  }
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    .nav {
+      width: 100vw;
+      height: inherit;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      &__heading {
+        @include text-style($primary, 0.8rem, 'FuturaDemiC');
+      }
+
+      &__list {
+        display: none;
+      }
+
+      &__tel {
+        color: white;
+        border: none;
+      }
+      &__button {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+
+

@@ -1,0 +1,409 @@
+@import "../../less/mixin";
+$primary: #E3B873;
+$greyOpacity: #FFFFFF50;
+
+.team {
+  height: 1830px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &__sign {
+    height: 380px;
+    background-color: black;
+    padding: 0 auto;
+    margin-bottom: 280px;
+  }
+  .sign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__heading {
+      @include text-style(white, 1.1rem, 'Yeseva One');
+      font-weight: lighter;
+    }
+    &__image {
+      content: url("teamSign.png");
+      padding: 0 auto;
+    }
+    &__paragraph {
+      @include text-style(white, 1.1rem, 'FuturaBookC');
+    }
+  }
+  .members {
+    width: 1060px;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 170px;
+    top: 170px;
+  }
+  .proj {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 307px;
+    justify-content: space-between;
+    &__icon {
+      content: url("brain.png");
+      z-index: 3;
+      width: 70px;
+      height: 70px;
+    }
+    &__picture {
+      content: url("face1.png");
+      position: absolute;
+      z-index: 0;
+      top: 35px;
+      left: 35px;
+    }
+    &__div {
+      width: 233px;
+      height: 137px;
+      background-color: white;
+      z-index: 2;
+      margin-left: 55px;
+      text-align: center;
+      h3 {
+        @include text-style(black, 1rem, 'Yeseva One');
+      }
+      p {
+        @include text-style(#959595, 1rem, 'FuturaBookC');
+      }
+      div {
+        height: 24px;
+        padding-top: 15px;
+        background-color: $primary;
+        @include text-style(white, 0.7rem, 'Yeseva One');
+      }
+    }
+  }
+  .designer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 307px;
+    justify-content: space-between;
+    &__icon {
+      content: url("designer.png");
+      z-index: 3;
+      width: 70px;
+      height: 70px;
+    }
+    &__picture {
+      content: url("face2.png");
+      position: absolute;
+      z-index: 0;
+      top: 35px;
+      left: 35px;
+    }
+    &__div {
+      width: 233px;
+      height: 137px;
+      background-color: white;
+      z-index: 2;
+      margin-left: 55px;
+      text-align: center;
+      h3 {
+        @include text-style(black, 1rem, 'Yeseva One');
+      }
+      p {
+        @include text-style(#959595, 1rem, 'FuturaBookC');
+      }
+      div {
+        height: 24px;
+        padding-top: 15px;
+        background-color: $primary;
+        @include text-style(white, 0.7rem, 'Yeseva One');
+      }
+    }
+  }
+  .foreman {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 307px;
+    justify-content: space-between;
+    &__icon {
+      content: url("fore.png");
+      z-index: 3;
+      width: 70px;
+      height: 70px;
+    }
+    &__picture {
+      content: url("face3.png");
+      position: absolute;
+      z-index: 0;
+      top: 35px;
+      left: 35px;
+    }
+    &__div {
+      width: 233px;
+      height: 137px;
+      background-color: white;
+      z-index: 2;
+      margin-left: 55px;
+      text-align: center;
+      h3 {
+        @include text-style(black, 1rem, 'Yeseva One');
+      }
+      p {
+        @include text-style(#959595, 1rem, 'FuturaBookC');
+      }
+      div {
+        height: 24px;
+        padding-top: 15px;
+        background-color: $primary;
+        @include text-style(white, 0.7rem, 'Yeseva One');
+      }
+    }
+  }
+  &__desc {
+    width: 558px;
+    margin: 0 auto;
+    text-align: center;
+    :first-child {
+      width: 55px;
+      height: 1px;
+      border-bottom: solid $primary 1px;
+      margin: 0 auto;
+    }
+    @include text-style(#363636, 1.2rem, 'FuturaBookC');
+  }
+  &__clients {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .clients {
+    &__heading {
+      margin-top: 40px;
+      text-align: center;
+      h3 {
+        @include text-style(#181818, 1.2rem, 'Yeseva One');
+      }
+      img {
+        content: url("clients.png");
+      }
+      p {
+        @include text-style(#363636, 1.2rem, 'FuturaBookC');
+      }
+    }
+  }
+  .review {
+    width: 1236px;
+    height: 455px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 40px;
+  }
+  .first {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    &__image {
+      content: url("client1.png");
+      height: 76px;
+      width: 76px;
+    }
+    &__heading {
+      @include text-style(#181818, 1rem, 'Yeseva One');
+      font-weight: lighter;
+      line-height: 20px;
+      position: absolute;
+      left : 119px;
+      top: 0px;
+    }
+    &__paragraph {
+      @include text-style(#959595, 0.95rem, 'FuturaBookC');
+      line-height: 30px;
+      margin: 0 auto;
+    }
+    &__days {
+      content: url("days1.png");
+      width: 293px;
+      height: 53px;
+
+    }
+  }
+  .second {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    &__image {
+      content: url("client2.png");
+      height: 76px;
+      width: 76px;
+    }
+    &__heading {
+      @include text-style(#181818, 1rem, 'Yeseva One');
+      font-weight: lighter;
+      line-height: 20px;
+      position: absolute;
+      left : 119px;
+      top: 0px;
+    }
+    &__paragraph {
+      @include text-style(#959595, 0.95rem, 'FuturaBookC');
+      line-height: 30px;
+      margin: 0 auto;
+    }
+    &__days {
+      content: url("days2.png");
+      width: 293px;
+      height: 53px;
+
+    }
+  }
+  .third {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    &__image {
+      content: url("client3.png");
+      height: 76px;
+      width: 76px;
+    }
+    &__heading {
+      @include text-style(#181818, 1rem, 'Yeseva One');
+      font-weight: lighter;
+      line-height: 20px;
+      position: absolute;
+      left : 119px;
+      top: 0px;
+    }
+    &__paragraph {
+      @include text-style(#959595, 0.95rem, 'FuturaBookC');
+      line-height: 30px;
+      margin: 0 auto;
+    }
+    &__days {
+      content: url("days3.png");
+      width: 293px;
+      height: 53px;
+
+    }
+  }
+  .form-three {
+    width: 883px;
+    height: 445px;
+    position: absolute;
+    top: 1625px;
+    left: 288px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    z-index: 2;
+    &__heading {
+      @include text-style(white, 1.1rem, 'FuturaDemiC');
+      line-height: 20px;
+      margin: 28px auto 0;
+    }
+    &__name {
+      width: 400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      p {
+        @include text-style(grey, 0.9rem, 'FuturaBookC');
+      }
+      input {
+        width: inherit;
+        @include text-style(white, 1rem, 'FuturaMediumC');
+        border: 0 solid white;
+        background-color: black;
+        border-bottom: 1px solid $greyOpacity;
+      }
+    }
+    &__question {
+      width: 400px;
+      margin: 0 auto;
+      p {
+        @include text-style(grey, 0.9rem, 'FuturaBookC');
+      }
+      input {
+        width: inherit;
+        @include text-style(white, 1rem, 'FuturaMediumC');
+        border: 0 solid white;
+        background-color: black;
+        border-bottom: 1px solid $greyOpacity;
+      }
+    }
+    &__check {
+      display: flex;
+      width: 285px;
+      margin-left: 45px;
+      @include text-style(white, 1rem, 'FuturaBookC');
+      :first-child {
+
+      }
+      :last-child {
+        margin: 0 auto;
+      }
+    }
+    &__button {
+      width: 200px;
+      height: 51px;
+      background-color: $primary;
+      @include text-style(white, 0.8rem, 'FuturaDemiC');
+      border: none;
+    }
+  }
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    height: 2068px;
+    width: 100vw;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .sign {
+      height: 150px;
+      margin-bottom: 0;
+    }
+    .members {
+      width: 100vw;
+      height: 1455px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      align-items: center;
+      left: 0;
+      top: 0;
+    }
+    .proj {
+      &__div {
+        margin: 200px 0 0 50px;
+      }
+    }
+    .designer {
+      &__div {
+        margin: 200px 0 0 50px;
+      }
+    }
+    .foreman {
+      &__div {
+        margin: 200px 0 0 50px;
+      }
+    }
+    &__desc {
+      display: none;
+    }
+    &__clients {
+      display: none;
+    }
+    .form-three {
+      width: 420px;
+      height: 445px;
+      left: 0px;
+    }
+  }
+}

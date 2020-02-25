@@ -1,0 +1,129 @@
+@import "../../less/mixin";
+$primary: #E3B873;
+
+.fantasies {
+  height: 864px;
+  background-image: url("fanBackground.png");
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &__styles {
+    display: flex;
+    flex-direction: column;
+    height: 629px;
+    justify-content: space-between;
+  }
+
+  .styles {
+    &__heading {
+      width: 300px;
+      line-height: 30px;
+      @include text-style($primary, 1.5rem, 'Yeseva One');
+      font-weight: lighter;
+    }
+
+    &__list {
+      width: 300px;
+      height: 516px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0;
+      @include text-style(white, 1.1rem, 'Proxima Nova');
+      opacity: 0.9;
+      line-height: 20px;
+
+      :first-child {
+        color: $primary;
+        width: 130px;
+        border-bottom: solid $primary 1px;
+      }
+    }
+  }
+
+  &__pictures {
+    display: flex;
+    width: 750px;
+    height: 1020px;
+    justify-content: space-between;
+  }
+
+  .pictures {
+    z-index: 1;
+
+    &__col-one {
+      display: flex;
+      flex-direction: column;
+      height: 950px;
+      justify-content: space-between;
+      padding-top: 60px;
+
+      :first-child {
+        content: url("fan1.png");
+      }
+
+      :last-child {
+        content: url("fan2.png");
+      }
+    }
+
+    &__col-two {
+      display: flex;
+      flex-direction: column;
+      height: 950px;
+      justify-content: space-between;
+
+      :first-child {
+        content: url("fan3.png");
+      }
+
+      :last-child {
+        content: url("fan4.png");
+      }
+    }
+  }
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    height: 250px;
+    margin-top: 600px;
+    z-index: 2;
+    background-color: white;
+    background-image: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &__styles {
+      display: flex;
+      flex-direction: column;
+      height: 188px;
+      justify-content: space-between;
+    }
+    .styles {
+      height: 400px;
+
+      &__heading {
+        z-index: 2;
+        padding-top: 83px;
+        height: 112px;
+        width: 300px;
+        line-height: 30px;
+        @include text-style($primary, 1.5rem, 'Yeseva One');
+        font-weight: lighter;
+        text-align: center;
+      }
+
+      &__list {
+        content: url("fanMobile.png");
+        opacity: 1;
+      }
+    }
+    .pictures {
+      z-index: 1;
+
+      &__col-one {
+        dispay: none;
+      }
+    }
+  }
+}

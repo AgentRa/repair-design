@@ -1,0 +1,89 @@
+@import "reset";
+@import "mixin";
+@import "../typography/fonts";
+@import "../blocks/page-header/header";
+@import "../blocks/title/title";
+@import "../blocks/projects/projects";
+@import "../blocks/main/main";
+@import "../blocks/fantasies/fantasies";
+@import "../blocks/design-project/design-project";
+@import "../blocks/steps/steps";
+@import "../blocks/team/team";
+@import "../blocks/map/map";
+@import "../blocks/footer/footer";
+
+$bg-color-black: black;
+$bg-color-white: white;
+
+html {
+  background-color: rgba(140, 140, 110, 0.4);
+
+
+body {
+  margin: 0 auto;
+  width: 1440px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+   h1 {
+     display: none;
+   }
+  }
+  a {
+    @include links(orange, white, $primary, teal);
+  }
+  .button {
+  @include button();
+  }
+
+  @media (max-width: 1440px) {
+    width: 100vw;
+  }
+  .video {
+    position : absolute;
+    top: 1650px;
+    left: 323px;
+    z-index: 1;
+    left: 21.5%;
+    @media only screen and (min-device-width : 480px) and (max-device-width : 1024px) {
+      display: none;
+    }
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+      left: 0px;
+      top: 1320px;
+    }
+    iframe {
+      @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        width: 440px;
+        height: 207px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.section5 {
+  height: 1615px;
+  background-color: $bg-color-black;
+}
+
+.section6 {
+  height: 1520px;
+  background-color: $bg-color-black;
+}
+
+.section7 {
+  height: 950px;
+  background-color: $bg-color-black;
+}
+
+.section8 {
+  height: 135px;
+  background-color: $bg-color-black;
+}

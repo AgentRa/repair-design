@@ -1,0 +1,139 @@
+@import "../../less/mixin";
+$primary: #E3B873;
+
+.steps {
+  height: 1000px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 150px;
+  &__work {
+    width: 304px;
+    height: 589px;
+    margin-top: 100px;
+  }
+  .work {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__paragraph {
+      @include text-style(white, 0.9rem, 'FuturaDemiC');
+      margin: 0;
+    }
+    &__heading {
+      display: inline-block;
+      @include text-style($primary, 1.5rem, 'Yeseva One');
+      font-weight: lighter;
+      letter-spacing: 1px;
+      div {
+        display: inline-block;
+        width: 92px;
+        height: 2px;
+        border-bottom: solid $primary 1px;
+        margin-left: 30px;
+      }
+      + div {
+        height: 100px;
+      }
+    }
+    &__number {
+      @include text-style(white, 1rem, 'Yeseva One');
+    }
+    &__departure {
+      @include text-style($primary, 0.85rem, 'Yeseva One');
+      font-weight: lighter;
+      line-height: 20px;
+    }
+    &__text {
+      @include text-style(white, 0.85rem, 'FuturaBookC');
+      line-height: 20px;
+      + div {
+        height: 100px;
+      }
+    }
+  }
+
+  .slider {
+    width: 287px;
+    display: flex;
+    justify-content: space-between;
+    &__arrow {
+      content: url("sliderLeft.png");
+      &:hover {
+        cursor: pointer;
+      }
+      &_right {
+        content: url("sliderLeft.png");
+        transform: rotate(180deg);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    &__circles {
+      width: 145px;
+      display: flex;
+      justify-content: space-between;
+      :not(:first-child){
+        background-color: $greyOpacity;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      > div {
+        background-color: white;
+        width: 10px;
+        height: 10px;
+        border-radius: 25px;
+        &:hover {
+          cursor: pointer;
+          background-color: white;
+        }
+      }
+    }
+  }
+
+  &__slides {
+    display: flex;
+    flex-direction: column;
+    width: 765px;
+    height: 600px;
+    justify-content: space-between;
+    padding-top: 200px;
+  }
+  .order {
+    @include text-style(#FFFFFF50, 0.95rem, 'FuturaBookC');
+    * div {
+      width: 130px;
+      height: 127px;
+      :first-child {
+        border-bottom: solid #FFFFFF50 1px;
+        width: 20px;
+      }
+    }
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      :first-child :not(div) {
+        color: white;
+      }
+    }
+    &__bot {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__image {
+      content: url("stepImage.png");
+    }
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    display: none;
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    display: none;
+  }
+}
